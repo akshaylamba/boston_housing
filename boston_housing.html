@@ -11844,8 +11844,6 @@ div#notebook {
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>/Library/Python/2.7/site-packages/sklearn/cross_validation.py:44: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
   &#34;This module will be removed in 0.20.&#34;, DeprecationWarning)
-/Library/Python/2.7/site-packages/sklearn/learning_curve.py:23: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the functions are moved. This module will be removed in 0.20
-  DeprecationWarning)
 </pre>
 </div>
 </div>
@@ -11861,6 +11859,16 @@ div#notebook {
 3  6.998   2.94     18.7
 4  7.147   5.33     18.7
 Boston housing dataset has 489 data points with 4 variables each.
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/Library/Python/2.7/site-packages/sklearn/learning_curve.py:23: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the functions are moved. This module will be removed in 0.20
+  DeprecationWarning)
 </pre>
 </div>
 </div>
@@ -11899,23 +11907,23 @@ Boston housing dataset has 489 data points with 4 variables each.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Minimum price of the data</span>
-<span class="n">minimum_price</span> <span class="o">=</span> <span class="n">prices</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+<span class="n">minimum_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
 <span class="c1"># TODO: Maximum price of the data</span>
-<span class="n">maximum_price</span> <span class="o">=</span> <span class="n">prices</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+<span class="n">maximum_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
 <span class="c1"># TODO: Mean price of the data</span>
-<span class="n">mean_price</span> <span class="o">=</span> <span class="n">prices</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">mean_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
 <span class="c1"># TODO: Median price of the data</span>
-<span class="n">median_price</span> <span class="o">=</span> <span class="n">prices</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+<span class="n">median_price</span> <span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span> <span class="n">prices</span><span class="p">)</span>
 
 <span class="c1"># TODO: Standard deviation of prices of the data</span>
-<span class="n">std_price</span> <span class="o">=</span> <span class="n">prices</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+<span class="n">std_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
 <span class="c1"># Show the calculated statistics</span>
 <span class="k">print</span> <span class="s2">&quot;Statistics for Boston housing dataset:</span><span class="se">\n</span><span class="s2">&quot;</span>
@@ -11944,7 +11952,7 @@ Minimum price: $105,000.00
 Maximum price: $1,024,800.00
 Mean price: $454,342.94
 Median price $438,900.00
-Standard deviation of prices: $165,340.28
+Standard deviation of prices: $165,171.13
 </pre>
 </div>
 </div>
@@ -11975,7 +11983,7 @@ Standard deviation of prices: $165,340.28
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong></p>
+<p><strong>Answer: Using my Instuition , I can say that Increase in the Number of RM will Lead to Increase in the Price and Vice Versa , increase in the LSTAT will lead to Decrease in the Price and Vice Versa  and Increase in the PTRATIO will lead to the increase  PRice but the Graph shows Unclear Result for PTRATIO</strong></p>
 
 </div>
 </div>
@@ -12009,7 +12017,7 @@ Standard deviation of prices: $165,340.28
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Import &#39;r2_score&#39;</span>
@@ -12134,7 +12142,7 @@ Standard deviation of prices: $165,340.28
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Import &#39;train_test_split&#39;</span>
@@ -13289,7 +13297,7 @@ mn5vt2eQLK0AAAAASUVORK5CYII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: At Max Depth 3 , the Model Tend To converge to a Particular Score and at this case having More data would help  </strong></p>
+<p><strong>Answer: At Max Depth 3 , the Model Tend To converge to a Particular Score and at this case having More data would not help  </strong></p>
 
 </div>
 </div>
@@ -13819,7 +13827,11 @@ scRnjDGmQ7HEZ4wxpkP5f5yQOLScfsULAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: GridSearchCV Help Find us the Best Parameter which can Generalise the model from the set of parameters </strong></p>
+<p><strong>Answer: GridSearchCV Help Find us the Best Parameter which can Generalise the model from the set of parameters 
+    What is the grid search space?  - It is the List of Parameter provide to GRIDSearchCV to Find Best Parameter from..
+    What is the output of the grid search?  - It is Generally The Best PARAM from the Search Space which Fit The Data in the More Generic Way
+    What kindly of search would it be? Selective or Exhaustive? - Exhaustive
+    How is the search being guided? i.e. based on what kind of criteria we could get the output? - Yes</strong></p>
 
 </div>
 </div>
@@ -13877,33 +13889,33 @@ For the <code>fit_model</code> function in the code cell below, you will need to
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[55]:</div>
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Import &#39;make_scorer&#39;, &#39;DecisionTreeRegressor&#39;, and &#39;GridSearchCV&#39;</span>
 
 <span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="kn">import</span>  <span class="n">DecisionTreeRegressor</span>
 <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">make_scorer</span>
-<span class="kn">from</span> <span class="nn">sklearn.grid_search</span> <span class="kn">import</span> <span class="n">GridSearchCV</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">GridSearchCV</span>
 
 <span class="k">def</span> <span class="nf">fit_model</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; Performs grid search over the &#39;max_depth&#39; parameter for a </span>
 <span class="sd">        decision tree regressor trained on the input data [X, y]. &quot;&quot;&quot;</span>
     
     <span class="c1"># Create cross-validation sets from the training data</span>
-    <span class="n">cv_sets</span> <span class="o">=</span> <span class="n">ShuffleSplit</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">n_splits</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.20</span><span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">cv_sets</span> <span class="o">=</span> <span class="n">ShuffleSplit</span><span class="p">(</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.20</span><span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
 
     <span class="c1"># TODO: Create a decision tree regressor object</span>
-    <span class="n">regressor</span> <span class="o">=</span> <span class="n">DecisionTreeRegressor</span><span class="p">()</span>
+    <span class="n">regressor</span> <span class="o">=</span> <span class="n">DecisionTreeRegressor</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
 
     <span class="c1"># TODO: Create a dictionary for the parameter &#39;max_depth&#39; with a range from 1 to 10</span>
-    <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;max_depth&#39;</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">]}</span>
+    <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;max_depth&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">)}</span>
 
     <span class="c1"># TODO: Transform &#39;performance_metric&#39; into a scoring function using &#39;make_scorer&#39; </span>
-    <span class="n">scoring_fnc</span> <span class="o">=</span> <span class="n">make_scorer</span><span class="p">(</span><span class="n">performance_metric</span><span class="p">)</span>
+    <span class="n">scoring_fnc</span> <span class="o">=</span> <span class="n">make_scorer</span><span class="p">(</span><span class="n">score_func</span><span class="o">=</span><span class="n">performance_metric</span><span class="p">)</span>
 
     <span class="c1"># TODO: Create the grid search object</span>
-    <span class="n">grid</span> <span class="o">=</span> <span class="n">grid</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">regressor</span><span class="p">,</span> <span class="n">param_grid</span><span class="o">=</span><span class="n">params</span><span class="p">,</span><span class="n">scoring</span><span class="o">=</span><span class="n">scoring_fnc</span><span class="p">,</span><span class="n">cv</span><span class="o">=</span><span class="n">cv_sets</span><span class="p">)</span>
+    <span class="n">grid</span> <span class="o">=</span> <span class="n">grid</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">regressor</span><span class="p">,</span> <span class="n">param_grid</span><span class="o">=</span><span class="n">params</span><span class="p">,</span><span class="n">scoring</span><span class="o">=</span><span class="n">scoring_fnc</span><span class="p">)</span>
 
     <span class="c1"># Fit the grid search object to the data to compute the optimal model</span>
     <span class="n">grid</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
@@ -13940,7 +13952,7 @@ For the <code>fit_model</code> function in the code cell below, you will need to
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Fit the training data to the model using grid search</span>
@@ -13961,67 +13973,9 @@ For the <code>fit_model</code> function in the code cell below, you will need to
 <div class="output_area">
 <div class="prompt"></div>
 
-<div class="output_subarea output_text output_error">
-<pre>
-
-<span class="ansi-red-fg">TypeError</span>Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-56-192f7c286a58&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-red-fg"># Fit the training data to the model using grid search</span>
-<span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> </span>reg <span class="ansi-blue-fg">=</span> fit_model<span class="ansi-blue-fg">(</span>X_train<span class="ansi-blue-fg">,</span> y_train<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      3</span> 
-<span class="ansi-green-intense-fg ansi-bold">      4</span> <span class="ansi-red-fg"># Produce the value for &#39;max_depth&#39;</span>
-<span class="ansi-green-intense-fg ansi-bold">      5</span> <span class="ansi-green-fg">print</span> <span class="ansi-blue-fg">&#34;Parameter &#39;max_depth&#39; is {} for the optimal model.&#34;</span><span class="ansi-blue-fg">.</span>format<span class="ansi-blue-fg">(</span>reg<span class="ansi-blue-fg">.</span>get_params<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;max_depth&#39;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">&lt;ipython-input-55-89ce781fdc10&gt;</span> in <span class="ansi-cyan-fg">fit_model</span><span class="ansi-blue-fg">(X, y)</span>
-<span class="ansi-green-intense-fg ansi-bold">     25</span> 
-<span class="ansi-green-intense-fg ansi-bold">     26</span>     <span class="ansi-red-fg"># Fit the grid search object to the data to compute the optimal model</span>
-<span class="ansi-green-fg">---&gt; 27</span><span class="ansi-red-fg">     </span>grid <span class="ansi-blue-fg">=</span> grid<span class="ansi-blue-fg">.</span>fit<span class="ansi-blue-fg">(</span>X<span class="ansi-blue-fg">,</span> y<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     28</span> 
-<span class="ansi-green-intense-fg ansi-bold">     29</span>     <span class="ansi-red-fg"># Return the optimal model after fitting the data</span>
-
-<span class="ansi-green-fg">/Library/Python/2.7/site-packages/sklearn/grid_search.pyc</span> in <span class="ansi-cyan-fg">fit</span><span class="ansi-blue-fg">(self, X, y)</span>
-<span class="ansi-green-intense-fg ansi-bold">    827</span> 
-<span class="ansi-green-intense-fg ansi-bold">    828</span>         &#34;&#34;&#34;
-<span class="ansi-green-fg">--&gt; 829</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">return</span> self<span class="ansi-blue-fg">.</span>_fit<span class="ansi-blue-fg">(</span>X<span class="ansi-blue-fg">,</span> y<span class="ansi-blue-fg">,</span> ParameterGrid<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>param_grid<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    830</span> 
-<span class="ansi-green-intense-fg ansi-bold">    831</span> 
-
-<span class="ansi-green-fg">/Library/Python/2.7/site-packages/sklearn/grid_search.pyc</span> in <span class="ansi-cyan-fg">_fit</span><span class="ansi-blue-fg">(self, X, y, parameter_iterable)</span>
-<span class="ansi-green-intense-fg ansi-bold">    571</span>                                     self<span class="ansi-blue-fg">.</span>fit_params<span class="ansi-blue-fg">,</span> return_parameters<span class="ansi-blue-fg">=</span>True<span class="ansi-blue-fg">,</span>
-<span class="ansi-green-intense-fg ansi-bold">    572</span>                                     error_score=self.error_score)
-<span class="ansi-green-fg">--&gt; 573</span><span class="ansi-red-fg">                 </span><span class="ansi-green-fg">for</span> parameters <span class="ansi-green-fg">in</span> parameter_iterable
-<span class="ansi-green-intense-fg ansi-bold">    574</span>                 for train, test in cv)
-<span class="ansi-green-intense-fg ansi-bold">    575</span> 
-
-<span class="ansi-green-fg">/Library/Python/2.7/site-packages/sklearn/externals/joblib/parallel.pyc</span> in <span class="ansi-cyan-fg">__call__</span><span class="ansi-blue-fg">(self, iterable)</span>
-<span class="ansi-green-intense-fg ansi-bold">    756</span>             <span class="ansi-red-fg"># was dispatched. In particular this covers the edge</span>
-<span class="ansi-green-intense-fg ansi-bold">    757</span>             <span class="ansi-red-fg"># case of Parallel used with an exhausted iterator.</span>
-<span class="ansi-green-fg">--&gt; 758</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">while</span> self<span class="ansi-blue-fg">.</span>dispatch_one_batch<span class="ansi-blue-fg">(</span>iterator<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    759</span>                 self<span class="ansi-blue-fg">.</span>_iterating <span class="ansi-blue-fg">=</span> True
-<span class="ansi-green-intense-fg ansi-bold">    760</span>             <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">/Library/Python/2.7/site-packages/sklearn/externals/joblib/parallel.pyc</span> in <span class="ansi-cyan-fg">dispatch_one_batch</span><span class="ansi-blue-fg">(self, iterator)</span>
-<span class="ansi-green-intense-fg ansi-bold">    601</span> 
-<span class="ansi-green-intense-fg ansi-bold">    602</span>         <span class="ansi-green-fg">with</span> self<span class="ansi-blue-fg">.</span>_lock<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 603</span><span class="ansi-red-fg">             </span>tasks <span class="ansi-blue-fg">=</span> BatchedCalls<span class="ansi-blue-fg">(</span>itertools<span class="ansi-blue-fg">.</span>islice<span class="ansi-blue-fg">(</span>iterator<span class="ansi-blue-fg">,</span> batch_size<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    604</span>             <span class="ansi-green-fg">if</span> len<span class="ansi-blue-fg">(</span>tasks<span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">==</span> <span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    605</span>                 <span class="ansi-red-fg"># No more tasks available in the iterator: tell caller to stop.</span>
-
-<span class="ansi-green-fg">/Library/Python/2.7/site-packages/sklearn/externals/joblib/parallel.pyc</span> in <span class="ansi-cyan-fg">__init__</span><span class="ansi-blue-fg">(self, iterator_slice)</span>
-<span class="ansi-green-intense-fg ansi-bold">    125</span> 
-<span class="ansi-green-intense-fg ansi-bold">    126</span>     <span class="ansi-green-fg">def</span> __init__<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> iterator_slice<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 127</span><span class="ansi-red-fg">         </span>self<span class="ansi-blue-fg">.</span>items <span class="ansi-blue-fg">=</span> list<span class="ansi-blue-fg">(</span>iterator_slice<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    128</span>         self<span class="ansi-blue-fg">.</span>_size <span class="ansi-blue-fg">=</span> len<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>items<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    129</span> 
-
-<span class="ansi-green-fg">/Library/Python/2.7/site-packages/sklearn/grid_search.pyc</span> in <span class="ansi-cyan-fg">&lt;genexpr&gt;</span><span class="ansi-blue-fg">((parameters,))</span>
-<span class="ansi-green-intense-fg ansi-bold">    572</span>                                     error_score=self.error_score)
-<span class="ansi-green-intense-fg ansi-bold">    573</span>                 <span class="ansi-green-fg">for</span> parameters <span class="ansi-green-fg">in</span> parameter_iterable
-<span class="ansi-green-fg">--&gt; 574</span><span class="ansi-red-fg">                 for train, test in cv)
-</span><span class="ansi-green-intense-fg ansi-bold">    575</span> 
-<span class="ansi-green-intense-fg ansi-bold">    576</span>         <span class="ansi-red-fg"># Out is a list of triplet: score, estimator, n_test_samples</span>
-
-<span class="ansi-red-fg">TypeError</span>: &#39;ShuffleSplit&#39; object is not iterable</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Parameter &#39;max_depth&#39; is 5 for the optimal model.
+</pre>
 </div>
 </div>
 
@@ -14034,7 +13988,7 @@ For the <code>fit_model</code> function in the code cell below, you will need to
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong></p>
+<p><strong>Answer:Parameter 'max_depth' is 5 for the optimal model. </strong></p>
 
 </div>
 </div>
@@ -14083,7 +14037,7 @@ For the <code>fit_model</code> function in the code cell below, you will need to
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Produce a matrix for client data</span>
@@ -14107,17 +14061,11 @@ For the <code>fit_model</code> function in the code cell below, you will need to
 <div class="output_area">
 <div class="prompt"></div>
 
-<div class="output_subarea output_text output_error">
-<pre>
-
-<span class="ansi-red-fg">NameError</span>Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-39-7447b9636274&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">      5</span> 
-<span class="ansi-green-intense-fg ansi-bold">      6</span> <span class="ansi-red-fg"># Show predictions</span>
-<span class="ansi-green-fg">----&gt; 7</span><span class="ansi-red-fg"> </span><span class="ansi-green-fg">for</span> i<span class="ansi-blue-fg">,</span> price <span class="ansi-green-fg">in</span> enumerate<span class="ansi-blue-fg">(</span>reg<span class="ansi-blue-fg">.</span>predict<span class="ansi-blue-fg">(</span>client_data<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">      8</span>     <span class="ansi-green-fg">print</span> <span class="ansi-blue-fg">&#34;Predicted selling price for Client {}&#39;s home: ${:,.2f}&#34;</span><span class="ansi-blue-fg">.</span>format<span class="ansi-blue-fg">(</span>i<span class="ansi-blue-fg">+</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">,</span> price<span class="ansi-blue-fg">)</span>
-
-<span class="ansi-red-fg">NameError</span>: name &#39;reg&#39; is not defined</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Predicted selling price for Client 1&#39;s home: $387,927.27
+Predicted selling price for Client 2&#39;s home: $230,316.28
+Predicted selling price for Client 3&#39;s home: $878,220.00
+</pre>
 </div>
 </div>
 
@@ -14130,7 +14078,10 @@ For the <code>fit_model</code> function in the code cell below, you will need to
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong></p>
+<p><strong>Answer:
+Predicted selling price for Client 1's home: $387,927.27
+Predicted selling price for Client 2's home: $230,316.28
+Predicted selling price for Client 3's home: $878,220.00</strong></p>
 
 </div>
 </div>
@@ -14147,7 +14098,7 @@ For the <code>fit_model</code> function in the code cell below, you will need to
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">vs</span><span class="o">.</span><span class="n">PredictTrials</span><span class="p">(</span><span class="n">features</span><span class="p">,</span> <span class="n">prices</span><span class="p">,</span> <span class="n">fit_model</span><span class="p">,</span> <span class="n">client_data</span><span class="p">)</span>
@@ -14164,28 +14115,20 @@ For the <code>fit_model</code> function in the code cell below, you will need to
 <div class="output_area">
 <div class="prompt"></div>
 
-<div class="output_subarea output_text output_error">
-<pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Trial 1: $409,500.00
+Trial 2: $411,417.39
+Trial 3: $415,800.00
+Trial 4: $428,316.00
+Trial 5: $413,334.78
+Trial 6: $411,931.58
+Trial 7: $399,663.16
+Trial 8: $407,232.00
+Trial 9: $402,531.82
+Trial 10: $413,700.00
 
-<span class="ansi-red-fg">TypeError</span>Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-40-20feff2e6844&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>vs<span class="ansi-blue-fg">.</span>PredictTrials<span class="ansi-blue-fg">(</span>features<span class="ansi-blue-fg">,</span> prices<span class="ansi-blue-fg">,</span> fit_model<span class="ansi-blue-fg">,</span> client_data<span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">/Users/cosmic/PycharmProjects/housing_prices/visuals.pyc</span> in <span class="ansi-cyan-fg">PredictTrials</span><span class="ansi-blue-fg">(X, y, fitter, data)</span>
-<span class="ansi-green-intense-fg ansi-bold">    118</span> 
-<span class="ansi-green-intense-fg ansi-bold">    119</span>         <span class="ansi-red-fg"># Fit the data</span>
-<span class="ansi-green-fg">--&gt; 120</span><span class="ansi-red-fg">         </span>reg <span class="ansi-blue-fg">=</span> fitter<span class="ansi-blue-fg">(</span>X_train<span class="ansi-blue-fg">,</span> y_train<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    121</span> 
-<span class="ansi-green-intense-fg ansi-bold">    122</span>         <span class="ansi-red-fg"># Make a prediction</span>
-
-<span class="ansi-green-fg">&lt;ipython-input-37-3915e58575af&gt;</span> in <span class="ansi-cyan-fg">fit_model</span><span class="ansi-blue-fg">(X, y)</span>
-<span class="ansi-green-intense-fg ansi-bold">     11</span> 
-<span class="ansi-green-intense-fg ansi-bold">     12</span>     <span class="ansi-red-fg"># Create cross-validation sets from the training data</span>
-<span class="ansi-green-fg">---&gt; 13</span><span class="ansi-red-fg">     </span>cv_sets <span class="ansi-blue-fg">=</span> ShuffleSplit<span class="ansi-blue-fg">(</span>X<span class="ansi-blue-fg">.</span>shape<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> n_splits <span class="ansi-blue-fg">=</span> <span class="ansi-cyan-fg">10</span><span class="ansi-blue-fg">,</span> test_size <span class="ansi-blue-fg">=</span> <span class="ansi-cyan-fg">0.20</span><span class="ansi-blue-fg">,</span> random_state <span class="ansi-blue-fg">=</span> <span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     14</span> 
-<span class="ansi-green-intense-fg ansi-bold">     15</span>     <span class="ansi-red-fg"># TODO: Create a decision tree regressor object</span>
-
-<span class="ansi-red-fg">TypeError</span>: __init__() got multiple values for keyword argument &#39;n_splits&#39;</pre>
+Range in prices: $28,652.84
+</pre>
 </div>
 </div>
 
@@ -14215,7 +14158,13 @@ For the <code>fit_model</code> function in the code cell below, you will need to
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong></p>
+<p>*<em>Answer:<br>
+-</em>How relevant today is data that was collected from 1978?  - Not Relevant, as House Price have faced Ups and Down in the Recent years , So We Should rather find Some new data *</p>
+<ul>
+<li><em>Are the features present in the data sufficient to describe a home? - No, There Should be Feature like Area,No of Bathrooms,Year of construction</em></li>
+<li><em>Is the model robust enough to make consistent predictions? - Yes , But We Should rather Introduce New Data and Some New Relavant Features</em></li>
+<li><em>Would data collected in an urban city like Boston be applicable in a rural city? - No**</em></li>
+</ul>
 
 </div>
 </div>
